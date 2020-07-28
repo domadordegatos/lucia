@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'peli',
+    loadChildren: () => import('./pages/peli/peli.module').then( m => m.PeliPageModule)
+  },
 ];
 
 @NgModule({
